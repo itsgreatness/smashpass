@@ -8,6 +8,6 @@ function tick() {
 }
 const TEXT_ELEM = document.getElementById("smash");
 const MAX_WORD = "SMASH OR PASS ";
-let word = TEXT_ELEM.textContent;
+let word = document.title;
 document.addEventListener("keypress", tick);
 window.setInterval(tick, 1000/6);
