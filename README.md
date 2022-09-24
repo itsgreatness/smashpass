@@ -1,6 +1,6 @@
-# O
-# --------
-# O
+# O  
+\---------  
+O  
 # why i made this
 it was a dare
 
