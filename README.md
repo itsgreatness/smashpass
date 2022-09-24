@@ -1,6 +1,6 @@
 # O</br>---------</br>O  
 # why i made this
-it was a dare
-
+oversimplified : it was a dare</br>
+long story short : sMaSh Or PaSs
 # why i agreed
 the heavens know
