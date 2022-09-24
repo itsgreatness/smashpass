@@ -1,24 +1,13 @@
-function addText(ot, ad, ml) {
-    return (ot + ad).trim().split(" ").splice((ot + ad).trim().split(" ").length-ml, (ot + ad).trim().split(" ").length).join(" ").trim();
+function regulateLength(s, ml) {
+    return s.substring(s.length-ml,s.length);
 }
-function regulateRange(i, r) {
-    return i % r;
+function tick() {
+    word += MAX_WORD[word.length%MAX_WORD.length];
+    document.title = regulateLength(word, MAX_WORD.length);
+    TEXT_ELEM.textContent = regulateLength(word, MAX_WORD.length);
 }
-const el = document.getElementById("smashpass");
-let i = 0;
-let word = "";
-window.setInterval(()=>{
-    i = regulateRange(i, 3);
-    if (i == 0) {
-        word = addText(word, " SMASH", 2);
-    } else 
-    if (i == 1) {
-        word = addText(word, " OR", 2);
-    } else
-    if (i == 2) {
-        word = addText(word, " PASS", 2);
-    }
-    el.textContent = word;
-    document.title = word;
-    i++;
-},3000);
+const TEXT_ELEM = document.getElementById("smash");
+const MAX_WORD = "SMASH OR PASS ";
+let word = TEXT_ELEM.textContent;
+document.addEventListener("keypress", tick);
+window.setInterval(tick, 1000/6);
